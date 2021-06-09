@@ -7,8 +7,8 @@
     <ProjectGuid>{8D8AB4AA-BA6F-4BEB-AE5B-B8A1A424159A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Poryecto.Datos</RootNamespace>
-    <AssemblyName>Poryecto.Datos</AssemblyName>
+    <RootNamespace>Proyecto.Datos</RootNamespace>
+    <AssemblyName>Proyecto.Datos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
