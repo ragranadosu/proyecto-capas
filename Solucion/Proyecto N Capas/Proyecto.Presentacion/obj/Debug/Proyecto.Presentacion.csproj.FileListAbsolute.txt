@@ -8,3 +8,6 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Pr
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.exe
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Poryecto.Negocio.dll
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Poryecto.Negocio.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.CopyComplete

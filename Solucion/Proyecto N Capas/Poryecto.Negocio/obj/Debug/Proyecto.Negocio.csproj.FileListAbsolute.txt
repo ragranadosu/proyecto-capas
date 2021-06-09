@@ -4,3 +4,8 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Pr
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\obj\Debug\Proyecto.Negocio.csproj.CoreCompileInputs.cache
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\obj\Debug\Poryecto.Negocio.dll
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\obj\Debug\Poryecto.Negocio.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\bin\Debug\Poryecto.Datos.dll
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\bin\Debug\Poryecto.Entidades.dll
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\bin\Debug\Poryecto.Datos.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\bin\Debug\Poryecto.Entidades.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\Proyecto\Solucion\Proyecto N Capas\Poryecto.Negocio\obj\Debug\Proyecto.Negocio.csproj.CopyComplete
