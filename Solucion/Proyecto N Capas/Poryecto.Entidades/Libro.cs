@@ -10,7 +10,7 @@ namespace Proyecto.Entidades
     {
         public int IdLibro { get; set; }
 
-        public int Num_Ejemplares { get; set; }
+        public int NumEjemplares { get; set; }
 
         public string Isbn { get; set; }
 
@@ -18,9 +18,9 @@ namespace Proyecto.Entidades
 
         public string Editorial { get; set; }
 
-        public string Anio_Edicion { get; set; }
+        public string AnioEdicion { get; set; }
 
-        public int Num_Edicion { get; set; }
+        public int NumEdicion { get; set; }
 
         public string Pais { get; set; }
 
@@ -28,7 +28,7 @@ namespace Proyecto.Entidades
 
         public string Materia { get; set; }
 
-        public string Num_Paginas { get; set; }
+        public string NumPaginas { get; set; }
 
         public string Ubicacion { get; set; }
 

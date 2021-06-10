@@ -16,6 +16,6 @@ namespace Proyecto.Entidades
 
         public DateTime Fecha { get; set; }
 
-        public DateTime Fecha_Limite { get; set; }
+        public DateTime FechaLimite { get; set; }
     }
 }
