@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto.Entidades
 {
-    class Prestamo
+    public class Prestamo
     {
         public int IdPrestamo { get; set; }
 
@@ -16,6 +16,6 @@ namespace Proyecto.Entidades
 
         public DateTime Fecha { get; set; }
 
-        public DateTime Fecha_Limite { get; set; }
+        public DateTime FechaLimite { get; set; }
     }
 }
