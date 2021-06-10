@@ -1,5 +1,7 @@
 CREATE DATABASE proyecto;
 
+-- DROP DATABASE proyecto;
+
 use proyecto;
 
 CREATE TABLE usuario (
@@ -13,16 +15,16 @@ CREATE TABLE usuario (
 
 CREATE TABLE libro (
 	idlibro INTEGER IDENTITY PRIMARY KEY,
-	numejemplares INTEGER,
+	num_ejemplares INTEGER,
 	isbn VARCHAR(60),
 	autor VARCHAR(255),
 	editorial VARCHAR(50),
-	anioedificion VARCHAR(5),
-	numedificion VARCHAR(10),
+	anio_edicion VARCHAR(5),
+	num_edicion VARCHAR(10),
 	pais VARCHAR(30),
 	idioma VARCHAR(50),
 	materia VARCHAR(50),
-	numpaginas INTEGER,
+	num_paginas INTEGER,
 	ubicacion VARCHAR(10),
 	descripcion VARCHAR(255)
 )
