@@ -5,7 +5,7 @@ CREATE DATABASE proyecto;
 use proyecto;
 
 CREATE TABLE usuario (
-	idsuario INTEGER IDENTITY PRIMARY KEY,
+	idusuario INTEGER IDENTITY PRIMARY KEY,
 	nombre_completo VARCHAR(30),
 	email VARCHAR(50),
 	contrasena VARCHAR(255),
@@ -30,8 +30,10 @@ CREATE TABLE libro (
 
 CREATE TABLE prestamo (
 	idprestamo INTEGER IDENTITY PRIMARY KEY,
-	libro INTEGER,
-	usuario INTEGER,
+	idlibro INTEGER,
+	idusuario INTEGER,
 	fecha DATE,
-	fecha_limite DATE
+	fecha_limite DATE,
+	FOREIGN KEY (idlibro) REFERENCES libro (idlibro),
+	FOREIGN KEY (idusuario) REFERENCES usuario (idusuario)
 );

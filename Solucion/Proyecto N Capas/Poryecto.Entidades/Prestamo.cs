@@ -8,7 +8,7 @@ namespace Proyecto.Entidades
 {
     class Prestamo
     {
-        public int idPrestamo { get; set; }
+        public int IdPrestamo { get; set; }
 
         public int Libro { get; set; }
 
