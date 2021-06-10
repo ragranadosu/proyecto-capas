@@ -33,5 +33,5 @@ CREATE TABLE prestamo (
 	libro INTEGER,
 	usuario INTEGER,
 	fecha DATE,
-	fechalimite DATE
+	fecha_limite DATE
 );
