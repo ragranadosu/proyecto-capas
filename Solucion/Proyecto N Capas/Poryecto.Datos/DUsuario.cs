@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Proyecto.Datos
 {
-    class DUsuario
+    public class DUsuario
     {
         public DataTable Listar()
         {
