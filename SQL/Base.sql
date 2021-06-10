@@ -6,7 +6,8 @@ use proyecto;
 
 CREATE TABLE usuario (
 	idusuario INTEGER IDENTITY PRIMARY KEY,
-	nombre_completo VARCHAR(30),
+	nombre VARCHAR(30),
+	apellido VARCHAR(30),
 	email VARCHAR(50),
 	contrasena VARCHAR(255),
 	rol VARCHAR(30)

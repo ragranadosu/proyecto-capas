@@ -6,7 +6,7 @@ use proyecto;
 
 CREATE PROC usuario_listar
 AS
-	SELECT idusuario as IdUsuario, nombre_completo as Nombre, email as Email, contrasena as Contrasena, rol as Rol
+	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
 	ORDER BY idusuario DESC
 GO
@@ -16,21 +16,22 @@ GO
 CREATE PROC usuario_buscar
 @valor varchar(30)
 AS
-	SELECT idusuario as IdUsuario, nombre_completo as Nombre, email as Email, contrasena as Contrasena, rol as Rol
+	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
-	WHERE nombre_completo like '%' + @valor + '%'
+	WHERE nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%'
 	ORDER BY nombre_completo DESC
 GO
 
 -- Insertar
 
 CREATE PROC usuario_insertar
-@nombre varchar(50),
+@nombre VARCHAR(50),
+@apellido VARCHAR(50),
 @email VARCHAR(50),
 @contrasena VARCHAR (255),
 @rol VARCHAR (20)
 AS
-	INSERT INTO usuario (nombre_completo, email, contrasena, rol)  values (@nombre, @email, @contrasena, @rol);
+	INSERT INTO usuario (nombre, apellido, email, contrasena, rol)  values (@nombre, @apellido ,@email, @contrasena, @rol);
 GO
 
 -- Actualizar
@@ -38,11 +39,12 @@ GO
 CREATE PROC usuario_actualizar
 @idusuario INTEGER,
 @nombre varchar(50),
+@apellido VARCHAR(50),
 @email VARCHAR(50),
 @contrasena VARCHAR (255),
 @rol VARCHAR (20)
 AS
-	UPDATE usuario SET nombre_completo=@nombre, email=@email, contrasena=@contrasena, rol=@rol
+	UPDATE usuario SET nombre=@nombre, apellido=@apellido ,email=@email, contrasena=@contrasena, rol=@rol
 	WHERE idusuario=@idusuario
 GO
 
