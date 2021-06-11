@@ -24,3 +24,5 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Soluc
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.CopyComplete
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.exe
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Datos.dll
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Datos.pdb
