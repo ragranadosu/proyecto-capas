@@ -19,7 +19,7 @@ AS
 	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
 	WHERE nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%'
-	ORDER BY nombre_completo DESC
+	ORDER BY nombre DESC
 GO
 
 -- Buscar por Email

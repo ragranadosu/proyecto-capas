@@ -1,6 +1,11 @@
 use proyecto;
 
-SELECT * FROM usuario WHERE email = 'raulmail@mail.com';
+SELECT * FROM usuario;
 
-INSERT INTO usuario (nombre, apellido, email, contrasena, rol)  values ('Andrea', 'Lopez', 'andreamail@mail.com', 'pass', 'admin');
-INSERT INTO usuario (nombre, apellido, email, contrasena, rol)  values ('Raul', 'Granados', 'raulmail@mail.com', 'pass', 'profesor');
+INSERT INTO usuario (nombre, apellido, email, contrasena, rol)  VALUES ('Andrea', 'Lopez', 'andreamail@mail.com', 'pass', 'admin');
+INSERT INTO usuario (nombre, apellido, email, contrasena, rol)  VALUES ('Raul', 'Granados', 'raulmail@mail.com', 'pass', 'profesor');
+
+SELECT * FROM libro;
+
+INSERT INTO libro (num_ejemplares, isbn,autor, editorial, anio_edicion, num_edicion, pais, idioma, materia, num_paginas, ubicacion, descripcion)
+	VALUES ('')
