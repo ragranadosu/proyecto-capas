@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Proyecto.Entidades;
+using Proyecto.Negocio;
+using System;
 using System.Windows.Forms;
 
 namespace Proyecto.Presentacion
@@ -19,7 +14,25 @@ namespace Proyecto.Presentacion
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            Usuario U = NUsuario.BuscarPorEmail(TxtEmail.Text);
 
+            if (U != null)
+            {
+                Console.WriteLine(U.Contrasena);
+                if (TxtContrasena.Text.Equals(U.Contrasena))
+                {
+                    Inicio inicio = new Inicio();
+                    inicio.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrectas", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("usuario no encontrado", "Error");
+            }
         }
     }
 }

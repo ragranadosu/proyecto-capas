@@ -22,6 +22,16 @@ AS
 	ORDER BY nombre_completo DESC
 GO
 
+-- Buscar por Email
+
+CREATE PROC usuario_buscarEmail
+@email varchar(30)
+AS
+	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
+	FROM usuario
+	WHERE email=@email
+GO
+
 -- Insertar
 
 CREATE PROC usuario_insertar

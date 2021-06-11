@@ -1,4 +1,5 @@
 ﻿using Proyecto.Datos;
+using Proyecto.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,6 +23,13 @@ namespace Proyecto.Negocio
             DUsuario Datos = new DUsuario();
 
             return Datos.Buscar(Valor);
+        }
+
+        public static Usuario BuscarPorEmail(string Valor)
+        {
+            DUsuario Datos = new DUsuario();
+
+            return Datos.BuscarPorEmail(Valor);
         }
     }
 }

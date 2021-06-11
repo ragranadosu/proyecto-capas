@@ -16,6 +16,6 @@ namespace Proyecto.Entidades
 
         public string Contrasena { get; set; }
 
-        public string rol { get; set; }
+        public string Rol { get; set; }
     }
 }
