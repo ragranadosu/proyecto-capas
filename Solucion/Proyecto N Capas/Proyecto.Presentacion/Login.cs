@@ -20,8 +20,17 @@ namespace Proyecto.Presentacion
             {
                 if (TxtContrasena.Text.Equals(U.Contrasena))
                 {
-                    Inicio inicio = new Inicio();
-                    inicio.Show();
+                    if (U.Rol.Equals("profesor"))
+                    {
+                        FrmInicioProfesor FrmInicioProfesor = new FrmInicioProfesor();
+                        FrmInicioProfesor.Show();
+                    }
+                    else
+                    {
+
+                        Inicio inicio = new Inicio();
+                        inicio.Show();
+                    }
                 }
                 else
                 {
