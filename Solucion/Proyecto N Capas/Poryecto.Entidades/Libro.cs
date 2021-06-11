@@ -10,6 +10,8 @@ namespace Proyecto.Entidades
     {
         public int IdLibro { get; set; }
 
+        public string Titulo { get; set; }
+
         public int NumEjemplares { get; set; }
 
         public string Isbn { get; set; }

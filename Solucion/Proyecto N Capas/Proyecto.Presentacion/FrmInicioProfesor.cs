@@ -16,5 +16,26 @@ namespace Proyecto.Presentacion
         {
             InitializeComponent();
         }
+
+        private void Listar()
+        {
+            try
+            {
+                //DgvListado .DataSource = NLibro
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmInicioProfesor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
