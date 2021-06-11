@@ -18,7 +18,6 @@ namespace Proyecto.Presentacion
 
             if (U != null)
             {
-                Console.WriteLine(U.Contrasena);
                 if (TxtContrasena.Text.Equals(U.Contrasena))
                 {
                     Inicio inicio = new Inicio();
