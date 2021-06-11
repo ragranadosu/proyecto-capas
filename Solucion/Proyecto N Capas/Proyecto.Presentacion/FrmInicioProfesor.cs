@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,7 @@ namespace Proyecto.Presentacion
         {
             try
             {
-                //DgvListado .DataSource = NLibro
+                DgvListado.DataSource = NLibro.Listar();
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
@@ -30,12 +31,12 @@ namespace Proyecto.Presentacion
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-
+            DgvListado.DataSource = NLibro.Buscar(TxtBuscar.Text);
         }
 
         private void FrmInicioProfesor_Load(object sender, EventArgs e)
         {
-
+            this.Listar();
         }
     }
 }

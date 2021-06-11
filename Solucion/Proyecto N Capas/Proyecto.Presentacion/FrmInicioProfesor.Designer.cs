@@ -30,7 +30,7 @@ namespace Proyecto.Presentacion
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
@@ -47,12 +47,12 @@ namespace Proyecto.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Busqueda de Libros";
             // 
-            // textBox1
+            // TxtBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 22);
-            this.textBox1.TabIndex = 1;
+            this.TxtBuscar.Location = new System.Drawing.Point(68, 116);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(233, 22);
+            this.TxtBuscar.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -104,7 +104,7 @@ namespace Proyecto.Presentacion
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.label1);
             this.Name = "FrmInicioProfesor";
             this.Text = "FrmInicioProfesor";
@@ -119,7 +119,7 @@ namespace Proyecto.Presentacion
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnBuscar;
