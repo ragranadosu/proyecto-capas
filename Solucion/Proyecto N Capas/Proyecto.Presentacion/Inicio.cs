@@ -50,11 +50,6 @@ namespace Proyecto.Presentacion
             }
         }
 
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form childForm in MdiChildren)
@@ -83,6 +78,13 @@ namespace Proyecto.Presentacion
         private void Inicio_Load(object sender, EventArgs e)
         {
             this.ListarLibros();
+        }
+
+        private void matenimientoLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(dateTimePicker.Text);
+            FrmMantenimientoLibros frmMantenimientoLibros = new FrmMantenimientoLibros();
+            frmMantenimientoLibros.Show();
         }
     }
 }
