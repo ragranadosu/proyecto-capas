@@ -14,32 +14,42 @@ namespace Proyecto.Presentacion
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            var dev = true;
+
             Usuario U = NUsuario.BuscarPorEmail(TxtEmail.Text);
 
-            if (U != null)
+            if (!dev)
             {
-                if (TxtContrasena.Text.Equals(U.Contrasena))
+                if (U != null)
                 {
-                    if (U.Rol.Equals("profesor"))
+                    if (TxtContrasena.Text.Equals(U.Contrasena))
                     {
-                        FrmInicioProfesor FrmInicioProfesor = new FrmInicioProfesor();
-                        FrmInicioProfesor.Show();
+                        if (U.Rol.Equals("profesor"))
+                        {
+                            FrmInicioProfesor FrmInicioProfesor = new FrmInicioProfesor();
+                            FrmInicioProfesor.Show();
+                        }
+                        else
+                        {
+
+                            Inicio inicio = new Inicio();
+                            inicio.Show();
+                        }
                     }
                     else
                     {
-
-                        Inicio inicio = new Inicio();
-                        inicio.Show();
+                        MessageBox.Show("Credenciales incorrectas", "Error");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Credenciales incorrectas", "Error");
+                    MessageBox.Show("usuario no encontrado", "Error");
                 }
             }
             else
             {
-                MessageBox.Show("usuario no encontrado", "Error");
+                Inicio inicio = new Inicio();
+                inicio.Show();
             }
         }
     }

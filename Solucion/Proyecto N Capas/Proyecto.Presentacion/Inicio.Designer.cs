@@ -48,28 +48,28 @@ namespace Proyecto.Presentacion
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.TxtBuscarLibro = new System.Windows.Forms.TextBox();
-            this.BtnBuscarLibro = new System.Windows.Forms.Button();
-            this.DgvLibros = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtBuscarProfesor = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DgvLibros = new System.Windows.Forms.DataGridView();
+            this.BtnBuscarLibro = new System.Windows.Forms.Button();
+            this.TxtBuscarLibro = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.BtnPrestamo = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TxtBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BtnPrestamo = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,6 +213,42 @@ namespace Proyecto.Presentacion
             this.panel1.Size = new System.Drawing.Size(781, 362);
             this.panel1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Busqueda de Libro";
+            // 
+            // DgvLibros
+            // 
+            this.DgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLibros.Location = new System.Drawing.Point(12, 74);
+            this.DgvLibros.Name = "DgvLibros";
+            this.DgvLibros.RowHeadersWidth = 51;
+            this.DgvLibros.RowTemplate.Height = 24;
+            this.DgvLibros.Size = new System.Drawing.Size(754, 248);
+            this.DgvLibros.TabIndex = 2;
+            // 
+            // BtnBuscarLibro
+            // 
+            this.BtnBuscarLibro.Location = new System.Drawing.Point(670, 46);
+            this.BtnBuscarLibro.Name = "BtnBuscarLibro";
+            this.BtnBuscarLibro.Size = new System.Drawing.Size(96, 23);
+            this.BtnBuscarLibro.TabIndex = 1;
+            this.BtnBuscarLibro.Text = "Buscar";
+            this.BtnBuscarLibro.UseVisualStyleBackColor = true;
+            this.BtnBuscarLibro.Click += new System.EventHandler(this.BtnBuscarLibro_Click);
+            // 
+            // TxtBuscarLibro
+            // 
+            this.TxtBuscarLibro.Location = new System.Drawing.Point(12, 45);
+            this.TxtBuscarLibro.Name = "TxtBuscarLibro";
+            this.TxtBuscarLibro.Size = new System.Drawing.Size(405, 22);
+            this.TxtBuscarLibro.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
@@ -223,6 +259,41 @@ namespace Proyecto.Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(565, 362);
             this.panel2.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 75);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(528, 247);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(457, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // TxtBuscarProfesor
+            // 
+            this.TxtBuscarProfesor.Location = new System.Drawing.Point(25, 46);
+            this.TxtBuscarProfesor.Name = "TxtBuscarProfesor";
+            this.TxtBuscarProfesor.Size = new System.Drawing.Size(251, 22);
+            this.TxtBuscarProfesor.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Busqueda de Profesor";
             // 
             // panel3
             // 
@@ -236,85 +307,30 @@ namespace Proyecto.Presentacion
             this.panel3.Size = new System.Drawing.Size(1352, 310);
             this.panel3.TabIndex = 6;
             // 
-            // TxtBuscarLibro
+            // dateTimePicker1
             // 
-            this.TxtBuscarLibro.Location = new System.Drawing.Point(12, 45);
-            this.TxtBuscarLibro.Name = "TxtBuscarLibro";
-            this.TxtBuscarLibro.Size = new System.Drawing.Size(405, 22);
-            this.TxtBuscarLibro.TabIndex = 0;
+            this.dateTimePicker1.Location = new System.Drawing.Point(983, 89);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(357, 22);
+            this.dateTimePicker1.TabIndex = 6;
             // 
-            // BtnBuscarLibro
+            // label4
             // 
-            this.BtnBuscarLibro.Location = new System.Drawing.Point(670, 46);
-            this.BtnBuscarLibro.Name = "BtnBuscarLibro";
-            this.BtnBuscarLibro.Size = new System.Drawing.Size(96, 23);
-            this.BtnBuscarLibro.TabIndex = 1;
-            this.BtnBuscarLibro.Text = "Buscar";
-            this.BtnBuscarLibro.UseVisualStyleBackColor = true;
-            this.BtnBuscarLibro.Click += new System.EventHandler(this.BtnBuscarLibro_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(980, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Fecha limite devolucion";
             // 
-            // DgvLibros
+            // BtnPrestamo
             // 
-            this.DgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLibros.Location = new System.Drawing.Point(12, 74);
-            this.DgvLibros.Name = "DgvLibros";
-            this.DgvLibros.RowHeadersWidth = 51;
-            this.DgvLibros.RowTemplate.Height = 24;
-            this.DgvLibros.Size = new System.Drawing.Size(754, 248);
-            this.DgvLibros.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Busqueda de Libro";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Busqueda de Profesor";
-            // 
-            // TxtBuscarProfesor
-            // 
-            this.TxtBuscarProfesor.Location = new System.Drawing.Point(25, 46);
-            this.TxtBuscarProfesor.Name = "TxtBuscarProfesor";
-            this.TxtBuscarProfesor.Size = new System.Drawing.Size(251, 22);
-            this.TxtBuscarProfesor.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(457, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 247);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Prestamos activos del profesor";
+            this.BtnPrestamo.Location = new System.Drawing.Point(983, 244);
+            this.BtnPrestamo.Name = "BtnPrestamo";
+            this.BtnPrestamo.Size = new System.Drawing.Size(357, 63);
+            this.BtnPrestamo.TabIndex = 4;
+            this.BtnPrestamo.Text = "Agregar Prestamo";
+            this.BtnPrestamo.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -326,30 +342,14 @@ namespace Proyecto.Presentacion
             this.dataGridView2.Size = new System.Drawing.Size(944, 248);
             this.dataGridView2.TabIndex = 4;
             // 
-            // BtnPrestamo
+            // label3
             // 
-            this.BtnPrestamo.Location = new System.Drawing.Point(983, 244);
-            this.BtnPrestamo.Name = "BtnPrestamo";
-            this.BtnPrestamo.Size = new System.Drawing.Size(357, 63);
-            this.BtnPrestamo.TabIndex = 4;
-            this.BtnPrestamo.Text = "Agregar Prestamo";
-            this.BtnPrestamo.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(980, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Fecha limite devolucion";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(983, 89);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(357, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Prestamos activos del profesor";
             // 
             // Inicio
             // 
@@ -366,18 +366,19 @@ namespace Proyecto.Presentacion
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.Text = "Matenimiento Biblioteca";
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,9 +63,26 @@ namespace Proyecto.Presentacion
             }
         }
 
+        private void ListarLibros()
+        {
+            try
+            {
+                DgvLibros.DataSource = NLibro.Listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void BtnBuscarLibro_Click(object sender, EventArgs e)
         {
+            DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);
+        }
 
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            this.ListarLibros();
         }
     }
 }
