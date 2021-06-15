@@ -44,7 +44,7 @@ namespace Proyecto.Presentacion
             this.TxtBuscarLibro = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DgvProfesores = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnBuscarProfesor = new System.Windows.Forms.Button();
             this.TxtBuscarProfesor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -70,7 +70,7 @@ namespace Proyecto.Presentacion
             this.MatenimientosMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1352, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1352, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -81,7 +81,7 @@ namespace Proyecto.Presentacion
             this.matenimientoLibrosToolStripMenuItem});
             this.MatenimientosMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.MatenimientosMenu.Name = "MatenimientosMenu";
-            this.MatenimientosMenu.Size = new System.Drawing.Size(130, 24);
+            this.MatenimientosMenu.Size = new System.Drawing.Size(130, 26);
             this.MatenimientosMenu.Text = "&Mantenimientos";
             // 
             // toolStripSeparator5
@@ -164,7 +164,7 @@ namespace Proyecto.Presentacion
             // panel2
             // 
             this.panel2.Controls.Add(this.DgvProfesores);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.BtnBuscarProfesor);
             this.panel2.Controls.Add(this.TxtBuscarProfesor);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(787, 31);
@@ -182,14 +182,15 @@ namespace Proyecto.Presentacion
             this.DgvProfesores.Size = new System.Drawing.Size(528, 247);
             this.DgvProfesores.TabIndex = 4;
             // 
-            // button1
+            // BtnBuscarProfesor
             // 
-            this.button1.Location = new System.Drawing.Point(457, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnBuscarProfesor.Location = new System.Drawing.Point(457, 46);
+            this.BtnBuscarProfesor.Name = "BtnBuscarProfesor";
+            this.BtnBuscarProfesor.Size = new System.Drawing.Size(96, 23);
+            this.BtnBuscarProfesor.TabIndex = 4;
+            this.BtnBuscarProfesor.Text = "Buscar";
+            this.BtnBuscarProfesor.UseVisualStyleBackColor = true;
+            this.BtnBuscarProfesor.Click += new System.EventHandler(this.BtnBuscarProfesor_Click);
             // 
             // TxtBuscarProfesor
             // 
@@ -316,7 +317,7 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtBuscarProfesor;
         private System.Windows.Forms.DataGridView DgvProfesores;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnBuscarProfesor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button BtnPrestamo;

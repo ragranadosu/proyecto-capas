@@ -34,12 +34,14 @@ GO
 
 -- Buscar profesor
 
+DROP PROC usuario_buscarProfesor;
+
 CREATE PROC usuario_buscarProfesor
 @valor varchar(30)
 AS
 	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
-	WHERE nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%' AND rol='profesor'
+	WHERE rol='profesor' AND nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%'
 	ORDER BY nombre ASC
 GO
 

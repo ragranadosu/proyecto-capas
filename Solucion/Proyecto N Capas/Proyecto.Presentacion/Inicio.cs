@@ -99,5 +99,10 @@ namespace Proyecto.Presentacion
             FrmMantenimientoLibros frmMantenimientoLibros = new FrmMantenimientoLibros();
             frmMantenimientoLibros.Show();
         }
+
+        private void BtnBuscarProfesor_Click(object sender, EventArgs e)
+        {
+            DgvProfesores.DataSource = NUsuario.Buscar(TxtBuscarProfesor.Text);
+        }
     }
 }
