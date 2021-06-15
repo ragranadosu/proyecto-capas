@@ -43,7 +43,7 @@ namespace Proyecto.Presentacion
             this.BtnBuscarLibro = new System.Windows.Forms.Button();
             this.TxtBuscarLibro = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvProfesores = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.TxtBuscarProfesor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace Proyecto.Presentacion
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProfesores)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -87,12 +87,12 @@ namespace Proyecto.Presentacion
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(129, 6);
             // 
             // matenimientoLibrosToolStripMenuItem
             // 
             this.matenimientoLibrosToolStripMenuItem.Name = "matenimientoLibrosToolStripMenuItem";
-            this.matenimientoLibrosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.matenimientoLibrosToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.matenimientoLibrosToolStripMenuItem.Text = "&Libros";
             this.matenimientoLibrosToolStripMenuItem.Click += new System.EventHandler(this.matenimientoLibrosToolStripMenuItem_Click);
             // 
@@ -163,7 +163,7 @@ namespace Proyecto.Presentacion
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.DgvProfesores);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.TxtBuscarProfesor);
             this.panel2.Controls.Add(this.label2);
@@ -172,15 +172,15 @@ namespace Proyecto.Presentacion
             this.panel2.Size = new System.Drawing.Size(565, 362);
             this.panel2.TabIndex = 5;
             // 
-            // dataGridView1
+            // DgvProfesores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 247);
-            this.dataGridView1.TabIndex = 4;
+            this.DgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProfesores.Location = new System.Drawing.Point(25, 75);
+            this.DgvProfesores.Name = "DgvProfesores";
+            this.DgvProfesores.RowHeadersWidth = 51;
+            this.DgvProfesores.RowTemplate.Height = 24;
+            this.DgvProfesores.Size = new System.Drawing.Size(528, 247);
+            this.DgvProfesores.TabIndex = 4;
             // 
             // button1
             // 
@@ -288,7 +288,7 @@ namespace Proyecto.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProfesores)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -315,7 +315,7 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtBuscarProfesor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvProfesores;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;

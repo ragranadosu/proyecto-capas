@@ -20,7 +20,7 @@ namespace Proyecto.Datos
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
 
-                SqlCommand Comando = new SqlCommand("usuario_listar", SqlCon);
+                SqlCommand Comando = new SqlCommand("usuario_listarProfesor", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -49,7 +49,7 @@ namespace Proyecto.Datos
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
 
-                SqlCommand Comando = new SqlCommand("usuario_buscar", SqlCon);
+                SqlCommand Comando = new SqlCommand("usuario_buscarProfesor", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
                 SqlCon.Open();

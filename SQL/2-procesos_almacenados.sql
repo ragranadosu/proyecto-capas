@@ -8,7 +8,17 @@ CREATE PROC usuario_listar
 AS
 	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
-	ORDER BY idusuario DESC
+	ORDER BY idusuario ASC
+GO
+
+-- Listar Profesor
+
+CREATE PROC usuario_listarProfesor
+AS
+	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
+	FROM usuario
+	WHERE rol = 'profesor'
+	ORDER BY idusuario ASC
 GO
 
 -- Buscar
@@ -19,7 +29,18 @@ AS
 	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
 	FROM usuario
 	WHERE nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%'
-	ORDER BY nombre DESC
+	ORDER BY nombre ASC
+GO
+
+-- Buscar profesor
+
+CREATE PROC usuario_buscarProfesor
+@valor varchar(30)
+AS
+	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
+	FROM usuario
+	WHERE nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%' AND rol='profesor'
+	ORDER BY nombre ASC
 GO
 
 -- Buscar por Email
@@ -75,7 +96,7 @@ CREATE PROC libro_listar
 AS
 	SELECT idlibro as IdLibro, titulo as Titulo, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
 	FROM libro
-	ORDER BY idlibro DESC
+	ORDER BY idlibro ASC
 GO
 
 --Buscar
@@ -86,7 +107,7 @@ AS
 	SELECT idlibro as IdLibro, titulo as Titulo, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
 	FROM libro
 	WHERE titulo like '%' + @valor + '%' or descripcion like '%' + @valor + '%'
-	ORDER BY titulo DESC
+	ORDER BY titulo ASC
 GO
 
 -- Insertar

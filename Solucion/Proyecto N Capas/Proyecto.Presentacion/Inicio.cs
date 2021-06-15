@@ -70,14 +70,27 @@ namespace Proyecto.Presentacion
             }
         }
 
+        private void ListarProfesores()
+        {
+            try
+            {
+                DgvProfesores.DataSource = NUsuario.Listar();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         private void BtnBuscarLibro_Click(object sender, EventArgs e)
         {
-            DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);
+            DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);  
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
             this.ListarLibros();
+            this.ListarProfesores();
         }
 
         private void matenimientoLibrosToolStripMenuItem_Click(object sender, EventArgs e)
