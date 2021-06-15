@@ -141,8 +141,10 @@ namespace Proyecto.Presentacion
             this.DgvLibros.Name = "DgvLibros";
             this.DgvLibros.RowHeadersWidth = 51;
             this.DgvLibros.RowTemplate.Height = 24;
+            this.DgvLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLibros.Size = new System.Drawing.Size(754, 248);
             this.DgvLibros.TabIndex = 2;
+            this.DgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLibros_CellClick);
             // 
             // BtnBuscarLibro
             // 
@@ -179,8 +181,10 @@ namespace Proyecto.Presentacion
             this.DgvProfesores.Name = "DgvProfesores";
             this.DgvProfesores.RowHeadersWidth = 51;
             this.DgvProfesores.RowTemplate.Height = 24;
+            this.DgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProfesores.Size = new System.Drawing.Size(528, 247);
             this.DgvProfesores.TabIndex = 4;
+            this.DgvProfesores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProfesores_CellClick);
             // 
             // BtnBuscarProfesor
             // 
@@ -244,6 +248,7 @@ namespace Proyecto.Presentacion
             this.BtnPrestamo.TabIndex = 4;
             this.BtnPrestamo.Text = "Agregar Prestamo";
             this.BtnPrestamo.UseVisualStyleBackColor = true;
+            this.BtnPrestamo.Click += new System.EventHandler(this.BtnPrestamo_Click);
             // 
             // dataGridView2
             // 

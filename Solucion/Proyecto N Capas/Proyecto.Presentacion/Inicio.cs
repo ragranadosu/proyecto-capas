@@ -14,6 +14,9 @@ namespace Proyecto.Presentacion
     public partial class Inicio : Form
     {
         private int childFormNumber = 0;
+        private int profesor;
+        private int libro;
+        private string fecha;
 
         public Inicio()
         {
@@ -78,7 +81,7 @@ namespace Proyecto.Presentacion
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -103,6 +106,21 @@ namespace Proyecto.Presentacion
         private void BtnBuscarProfesor_Click(object sender, EventArgs e)
         {
             DgvProfesores.DataSource = NUsuario.Buscar(TxtBuscarProfesor.Text);
+        }
+
+        private void DgvProfesores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.libro = Convert.ToInt32(DgvProfesores.CurrentRow.Cells["IdUsuario"].Value);
+        }
+
+        private void DgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.profesor = Convert.ToInt32(DgvLibros.CurrentRow.Cells["IdLibro"].Value);
+        }
+
+        private void BtnPrestamo_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(this.profesor + " " +this.libro + " " + dateTimePicker.Value);
         }
     }
 }
