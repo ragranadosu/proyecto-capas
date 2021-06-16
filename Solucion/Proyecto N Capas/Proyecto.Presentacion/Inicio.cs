@@ -89,8 +89,12 @@ namespace Proyecto.Presentacion
         {
             try
             {
-                DgvPrestamos.DataSource = NPrestamo.Listar();
+                if (this.profesor != 0)
+                {
+                    DgvPrestamos.DataSource = NPrestamo.BuscarPorProfesor(this.profesor);
+                }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
@@ -124,6 +128,7 @@ namespace Proyecto.Presentacion
         private void DgvProfesores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             this.profesor = Convert.ToInt32(DgvProfesores.CurrentRow.Cells["IdUsuario"].Value);
+            this.ListarPrestamos();
         }
 
         private void DgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -135,9 +140,24 @@ namespace Proyecto.Presentacion
         {
             try
             {
-                NPrestamo.Insertar(this.libro, this.profesor, dateTimePicker.Value, dateTimePicker.Value);
-                this.ListarPrestamos();
-                this.ListarLibros();
+                if (this.profesor != 0 & this.libro != 0)
+                {
+                    if (!Convert.ToBoolean(DgvLibros.CurrentRow.Cells["Prestado"].Value))
+                    {
+                        NPrestamo.Insertar(this.libro, this.profesor, dateTimePicker.Value, dateTimePicker.Value);
+
+                        this.ListarPrestamos();
+                        this.ListarLibros();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El libro se encuentra prestado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un profesor y un libro");
+                }
             }
             catch (Exception ex)
             {

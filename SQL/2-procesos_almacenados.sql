@@ -191,11 +191,14 @@ GO
 
 -- Insertar
 
+DROP PROC prestamo_insertar;
+
 CREATE PROC prestamo_insertar
 @idlibro INTEGER,
 @idusuario INTEGER,
 @fecha DATE,
 @fecha_limite DATE
 AS
+	UPDATE libro SET prestado=1 WHERE idlibro=@idlibro
 	INSERT INTO prestamo (idlibro, idusuario, fecha, fecha_limite)  values (@idlibro, @idusuario, @fecha, @fecha_limite);
 GO

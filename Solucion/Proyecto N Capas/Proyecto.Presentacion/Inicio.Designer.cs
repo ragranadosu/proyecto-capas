@@ -70,7 +70,7 @@ namespace Proyecto.Presentacion
             this.MatenimientosMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1352, 30);
+            this.menuStrip.Size = new System.Drawing.Size(1352, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -81,7 +81,7 @@ namespace Proyecto.Presentacion
             this.matenimientoLibrosToolStripMenuItem});
             this.MatenimientosMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.MatenimientosMenu.Name = "MatenimientosMenu";
-            this.MatenimientosMenu.Size = new System.Drawing.Size(130, 26);
+            this.MatenimientosMenu.Size = new System.Drawing.Size(130, 24);
             this.MatenimientosMenu.Text = "&Mantenimientos";
             // 
             // toolStripSeparator5
