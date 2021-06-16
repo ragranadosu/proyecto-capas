@@ -51,7 +51,7 @@ namespace Proyecto.Presentacion
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnPrestamo = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.DgvPrestamos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -60,7 +60,7 @@ namespace Proyecto.Presentacion
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesores)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -139,6 +139,7 @@ namespace Proyecto.Presentacion
             this.DgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLibros.Location = new System.Drawing.Point(12, 74);
             this.DgvLibros.Name = "DgvLibros";
+            this.DgvLibros.ReadOnly = true;
             this.DgvLibros.RowHeadersWidth = 51;
             this.DgvLibros.RowTemplate.Height = 24;
             this.DgvLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -217,7 +218,7 @@ namespace Proyecto.Presentacion
             this.panel3.Controls.Add(this.dateTimePicker);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.BtnPrestamo);
-            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Controls.Add(this.DgvPrestamos);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(0, 399);
             this.panel3.Name = "panel3";
@@ -250,15 +251,15 @@ namespace Proyecto.Presentacion
             this.BtnPrestamo.UseVisualStyleBackColor = true;
             this.BtnPrestamo.Click += new System.EventHandler(this.BtnPrestamo_Click);
             // 
-            // dataGridView2
+            // DgvPrestamos
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(15, 59);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(944, 248);
-            this.dataGridView2.TabIndex = 4;
+            this.DgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPrestamos.Location = new System.Drawing.Point(15, 59);
+            this.DgvPrestamos.Name = "DgvPrestamos";
+            this.DgvPrestamos.RowHeadersWidth = 51;
+            this.DgvPrestamos.RowTemplate.Height = 24;
+            this.DgvPrestamos.Size = new System.Drawing.Size(944, 248);
+            this.DgvPrestamos.TabIndex = 4;
             // 
             // label3
             // 
@@ -297,7 +298,7 @@ namespace Proyecto.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.DgvProfesores)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPrestamos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,7 +325,7 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.DataGridView DgvProfesores;
         private System.Windows.Forms.Button BtnBuscarProfesor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DgvPrestamos;
         private System.Windows.Forms.Button BtnPrestamo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker;

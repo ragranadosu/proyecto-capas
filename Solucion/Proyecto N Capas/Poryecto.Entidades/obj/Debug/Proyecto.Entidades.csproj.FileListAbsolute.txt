@@ -9,3 +9,4 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Soluc
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.dll
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.pdb
+C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.csprojAssemblyReference.cache

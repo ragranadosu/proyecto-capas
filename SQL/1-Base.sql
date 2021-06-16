@@ -16,6 +16,7 @@ CREATE TABLE usuario (
 CREATE TABLE libro (
 	idlibro INTEGER IDENTITY PRIMARY KEY,
 	titulo VARCHAR(150),
+	prestado BIT DEFAULT 0,
 	num_ejemplares INTEGER,
 	isbn VARCHAR(60),
 	autor VARCHAR(255),

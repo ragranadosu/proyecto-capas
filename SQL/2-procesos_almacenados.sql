@@ -34,8 +34,6 @@ GO
 
 -- Buscar profesor
 
-DROP PROC usuario_buscarProfesor;
-
 CREATE PROC usuario_buscarProfesor
 @valor varchar(30)
 AS
@@ -166,4 +164,37 @@ CREATE PROC libro_eliminar
 AS
 	DELETE FROM libro
 	WHERE idlibro=@idlibro
+GO
+
+-------- Procedimientos Prestamo ---------
+
+-- Listar
+
+CREATE PROC prestamo_listar
+AS
+	SELECT idprestamo as IdPrestamo, idlibro as Libro, idusuario as Usuario, fecha as Fecha, fecha_limite as FechaLimite
+	FROM prestamo
+	ORDER BY idprestamo ASC
+GO
+
+-- Listar por id de profesor 
+
+CREATE PROC prestamo_listarPorProfesor
+@idprofesor INTEGER
+AS
+	SELECT idprestamo as IdPrestamo, idlibro as Libro, idusuario as Usuario, fecha as Fecha, fecha_limite as FechaLimite
+	FROM prestamo
+	WHERE idusuario=@idprofesor
+	ORDER BY idprestamo ASC
+GO
+
+-- Insertar
+
+CREATE PROC prestamo_insertar
+@idlibro INTEGER,
+@idusuario INTEGER,
+@fecha DATE,
+@fecha_limite DATE
+AS
+	INSERT INTO prestamo (idlibro, idusuario, fecha, fecha_limite)  values (@idlibro, @idusuario, @fecha, @fecha_limite);
 GO

@@ -12,6 +12,8 @@ namespace Proyecto.Entidades
 
         public string Titulo { get; set; }
 
+        public bool Prestado { get; set; }
+
         public int NumEjemplares { get; set; }
 
         public string Isbn { get; set; }

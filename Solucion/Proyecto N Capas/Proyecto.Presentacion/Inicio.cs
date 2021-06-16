@@ -85,6 +85,18 @@ namespace Proyecto.Presentacion
             }
         }
 
+        private void ListarPrestamos()
+        {
+            try
+            {
+                DgvPrestamos.DataSource = NPrestamo.Listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void BtnBuscarLibro_Click(object sender, EventArgs e)
         {
             DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);  
@@ -94,6 +106,7 @@ namespace Proyecto.Presentacion
         {
             this.ListarLibros();
             this.ListarProfesores();
+            this.ListarPrestamos();
         }
 
         private void matenimientoLibrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,17 +123,26 @@ namespace Proyecto.Presentacion
 
         private void DgvProfesores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.libro = Convert.ToInt32(DgvProfesores.CurrentRow.Cells["IdUsuario"].Value);
+            this.profesor = Convert.ToInt32(DgvProfesores.CurrentRow.Cells["IdUsuario"].Value);
         }
 
         private void DgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.profesor = Convert.ToInt32(DgvLibros.CurrentRow.Cells["IdLibro"].Value);
+            this.libro = Convert.ToInt32(DgvLibros.CurrentRow.Cells["IdLibro"].Value);
         }
 
         private void BtnPrestamo_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(this.profesor + " " +this.libro + " " + dateTimePicker.Value);
+            try
+            {
+                NPrestamo.Insertar(this.libro, this.profesor, dateTimePicker.Value, dateTimePicker.Value);
+                this.ListarPrestamos();
+                this.ListarLibros();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }
