@@ -32,7 +32,13 @@ namespace Proyecto.Presentacion
             this.TabGeneral = new System.Windows.Forms.TabControl();
             this.tabPageListado = new System.Windows.Forms.TabPage();
             this.tabPageMantenimiento = new System.Windows.Forms.TabPage();
+            this.DgvLibros = new System.Windows.Forms.DataGridView();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.TabGeneral.SuspendLayout();
+            this.tabPageListado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).BeginInit();
             this.SuspendLayout();
             // 
             // TabGeneral
@@ -47,6 +53,9 @@ namespace Proyecto.Presentacion
             // 
             // tabPageListado
             // 
+            this.tabPageListado.Controls.Add(this.TxtBuscar);
+            this.tabPageListado.Controls.Add(this.BtnBuscar);
+            this.tabPageListado.Controls.Add(this.DgvLibros);
             this.tabPageListado.Location = new System.Drawing.Point(4, 25);
             this.tabPageListado.Name = "tabPageListado";
             this.tabPageListado.Padding = new System.Windows.Forms.Padding(3);
@@ -65,6 +74,47 @@ namespace Proyecto.Presentacion
             this.tabPageMantenimiento.Text = "Matenimiento";
             this.tabPageMantenimiento.UseVisualStyleBackColor = true;
             // 
+            // DgvLibros
+            // 
+            this.DgvLibros.AllowUserToAddRows = false;
+            this.DgvLibros.AllowUserToDeleteRows = false;
+            this.DgvLibros.AllowUserToOrderColumns = true;
+            this.DgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Seleccionar});
+            this.DgvLibros.Location = new System.Drawing.Point(6, 89);
+            this.DgvLibros.Name = "DgvLibros";
+            this.DgvLibros.ReadOnly = true;
+            this.DgvLibros.RowHeadersWidth = 51;
+            this.DgvLibros.RowTemplate.Height = 24;
+            this.DgvLibros.Size = new System.Drawing.Size(926, 360);
+            this.DgvLibros.TabIndex = 0;
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.MinimumWidth = 6;
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
+            this.Seleccionar.Width = 125;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(507, 31);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(137, 23);
+            this.BtnBuscar.TabIndex = 1;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(6, 31);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(429, 22);
+            this.TxtBuscar.TabIndex = 2;
+            // 
             // FrmMantenimientoLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -72,8 +122,12 @@ namespace Proyecto.Presentacion
             this.ClientSize = new System.Drawing.Size(970, 572);
             this.Controls.Add(this.TabGeneral);
             this.Name = "FrmMantenimientoLibros";
-            this.Text = "FrmMantenimientoLibros";
+            this.Text = "Mantenimiento Libros";
+            this.Load += new System.EventHandler(this.FrmMantenimientoLibros_Load);
             this.TabGeneral.ResumeLayout(false);
+            this.tabPageListado.ResumeLayout(false);
+            this.tabPageListado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,5 +137,9 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.TabControl TabGeneral;
         private System.Windows.Forms.TabPage tabPageListado;
         private System.Windows.Forms.TabPage tabPageMantenimiento;
+        private System.Windows.Forms.DataGridView DgvLibros;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox TxtBuscar;
     }
 }

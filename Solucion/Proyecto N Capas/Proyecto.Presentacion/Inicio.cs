@@ -103,7 +103,14 @@ namespace Proyecto.Presentacion
 
         private void BtnBuscarLibro_Click(object sender, EventArgs e)
         {
-            DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);  
+            try
+            {
+                DgvLibros.DataSource = NLibro.Buscar(TxtBuscarLibro.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }  
         }
 
         private void Inicio_Load(object sender, EventArgs e)
