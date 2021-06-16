@@ -94,7 +94,7 @@ GO
 
 CREATE PROC libro_listar
 AS
-	SELECT idlibro as IdLibro, titulo as Titulo, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
+	SELECT idlibro as IdLibro, titulo as Titulo, prestado as Prestado ,num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
 	FROM libro
 	ORDER BY idlibro ASC
 GO
@@ -104,7 +104,7 @@ GO
 CREATE PROC libro_buscar
 @valor varchar(30)
 AS
-	SELECT idlibro as IdLibro, titulo as Titulo, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
+	SELECT idlibro as IdLibro, titulo as Titulo, prestado as Prestado, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
 	FROM libro
 	WHERE titulo like '%' + @valor + '%' or descripcion like '%' + @valor + '%'
 	ORDER BY titulo ASC
@@ -138,6 +138,7 @@ GO
 CREATE PROC libro_actualizar
 @idlibro INTEGER,
 @titulo VARCHAR(50),
+@prestado bit,
 @num_ejemplares INTEGER,
 @isbn VARCHAR(50),
 @autor VARCHAR (255),
@@ -151,7 +152,7 @@ CREATE PROC libro_actualizar
 @ubicacion VARCHAR(50),
 @descripcion VARCHAR(255)
 AS
-	UPDATE libro SET titulo=@titulo, num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
+	UPDATE libro SET titulo=@titulo, prestado=@prestado,num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
 					anio_edicion=@anio_edicion, num_edicion=@num_edicion, pais=@pais, idioma=@idioma, materia=@materia,
 					num_paginas=@num_paginas, ubicacion=@ubicacion, descripcion=@descripcion
 	WHERE idlibro=@idlibro
