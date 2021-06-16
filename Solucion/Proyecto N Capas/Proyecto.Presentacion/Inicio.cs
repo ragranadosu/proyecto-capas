@@ -164,5 +164,11 @@ namespace Proyecto.Presentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+        private void BtnDevoluciones_Click(object sender, EventArgs e)
+        {
+            FrmDevoluciones frmDevoluciones = new FrmDevoluciones();
+            frmDevoluciones.Show();
+        }
     }
 }

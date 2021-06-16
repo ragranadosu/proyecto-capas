@@ -53,6 +53,8 @@ namespace Proyecto.Presentacion
             this.BtnPrestamo = new System.Windows.Forms.Button();
             this.DgvPrestamos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnDevoluciones = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,7 +69,8 @@ namespace Proyecto.Presentacion
             // 
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MatenimientosMenu});
+            this.MatenimientosMenu,
+            this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1352, 28);
@@ -215,6 +218,7 @@ namespace Proyecto.Presentacion
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.BtnDevoluciones);
             this.panel3.Controls.Add(this.dateTimePicker);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.BtnPrestamo);
@@ -243,7 +247,7 @@ namespace Proyecto.Presentacion
             // 
             // BtnPrestamo
             // 
-            this.BtnPrestamo.Location = new System.Drawing.Point(983, 244);
+            this.BtnPrestamo.Location = new System.Drawing.Point(983, 139);
             this.BtnPrestamo.Name = "BtnPrestamo";
             this.BtnPrestamo.Size = new System.Drawing.Size(357, 63);
             this.BtnPrestamo.TabIndex = 4;
@@ -269,6 +273,22 @@ namespace Proyecto.Presentacion
             this.label3.Size = new System.Drawing.Size(203, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Prestamos activos del profesor";
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // BtnDevoluciones
+            // 
+            this.BtnDevoluciones.Location = new System.Drawing.Point(983, 221);
+            this.BtnDevoluciones.Name = "BtnDevoluciones";
+            this.BtnDevoluciones.Size = new System.Drawing.Size(357, 63);
+            this.BtnDevoluciones.TabIndex = 7;
+            this.BtnDevoluciones.Text = "Devoluciones";
+            this.BtnDevoluciones.UseVisualStyleBackColor = true;
+            this.BtnDevoluciones.Click += new System.EventHandler(this.BtnDevoluciones_Click);
             // 
             // Inicio
             // 
@@ -329,6 +349,8 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Button BtnPrestamo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.Button BtnDevoluciones;
     }
 }
 
