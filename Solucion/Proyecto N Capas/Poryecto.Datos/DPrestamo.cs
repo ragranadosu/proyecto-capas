@@ -98,5 +98,31 @@ namespace Proyecto.Datos
             }
             return Rpta;
         }
+
+        public string Devolver(int IdPrestamo, int IdLibro)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("prestamo_devolver", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@idlibro", SqlDbType.Int).Value = IdLibro;
+                Comando.Parameters.Add("@idprestamo", SqlDbType.Int).Value = IdPrestamo;
+                SqlCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo devolver";
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
+        }
     }
 }

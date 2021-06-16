@@ -39,5 +39,12 @@ namespace Proyecto.Negocio
 
         }
 
+        public static string Devolver(int IdPrestamo, int IdLibro)
+        {
+            DPrestamo Datos = new DPrestamo();
+
+            return Datos.Devolver(IdPrestamo, IdLibro);
+        }
+
     }
 }

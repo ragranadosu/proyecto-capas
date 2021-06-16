@@ -73,7 +73,7 @@ namespace Proyecto.Presentacion
             this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1352, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1352, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -305,6 +305,7 @@ namespace Proyecto.Presentacion
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.Text = "Matenimiento Biblioteca";
+            this.Activated += new System.EventHandler(this.Inicio_Activated);
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

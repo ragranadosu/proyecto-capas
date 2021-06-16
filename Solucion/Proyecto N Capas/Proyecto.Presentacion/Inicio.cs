@@ -146,6 +146,8 @@ namespace Proyecto.Presentacion
                     {
                         NPrestamo.Insertar(this.libro, this.profesor, dateTimePicker.Value, dateTimePicker.Value);
 
+                        this.libro = 0;
+
                         this.ListarPrestamos();
                         this.ListarLibros();
                     }
@@ -169,6 +171,12 @@ namespace Proyecto.Presentacion
         {
             FrmDevoluciones frmDevoluciones = new FrmDevoluciones();
             frmDevoluciones.Show();
+        }
+
+        private void Inicio_Activated(object sender, EventArgs e)
+        {
+            this.ListarLibros();
+            this.ListarPrestamos();
         }
     }
 }

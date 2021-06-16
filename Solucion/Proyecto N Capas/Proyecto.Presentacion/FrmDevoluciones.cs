@@ -15,6 +15,7 @@ namespace Proyecto.Presentacion
     {
         private int profesor;
         private int prestamo;
+        private int libro;
         
         public FrmDevoluciones()
         {
@@ -51,12 +52,31 @@ namespace Proyecto.Presentacion
 
         private void BtnBuscarProfesor_Click(object sender, EventArgs e)
         {
-
+            DgvProfesores.DataSource = NUsuario.Buscar(TxtBuscarProfesor.Text);
         }
 
         private void BtnDevolver_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (this.profesor != 0 & this.prestamo != 0)
+                {
+                    NPrestamo.Devolver(this.prestamo, this.libro);
 
+                    this.prestamo = 0;
+                    this.libro = 0;
+
+                    this.ListarPrestamos();
+                }
+                else
+                {
+                    MessageBox.Show("Se debe seleccionar un profesor y un prestamo");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         private void DgvProfesores_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -67,7 +87,8 @@ namespace Proyecto.Presentacion
 
         private void DgvPrestamos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            this.prestamo = Convert.ToInt32(DgvPrestamos.CurrentRow.Cells["IdPrestamo"].Value);
+            this.libro = Convert.ToInt32(DgvPrestamos.CurrentRow.Cells["Libro"].Value);
         }
 
         private void FrmDevoluciones_Load(object sender, EventArgs e)
