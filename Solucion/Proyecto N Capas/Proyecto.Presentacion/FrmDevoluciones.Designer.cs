@@ -78,6 +78,9 @@ namespace Proyecto.Presentacion
             // 
             // DgvProfesores
             // 
+            this.DgvProfesores.AllowUserToAddRows = false;
+            this.DgvProfesores.AllowUserToDeleteRows = false;
+            this.DgvProfesores.AllowUserToOrderColumns = true;
             this.DgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProfesores.Location = new System.Drawing.Point(65, 140);
             this.DgvProfesores.Name = "DgvProfesores";
@@ -110,6 +113,9 @@ namespace Proyecto.Presentacion
             // 
             // DgvPrestamos
             // 
+            this.DgvPrestamos.AllowUserToAddRows = false;
+            this.DgvPrestamos.AllowUserToDeleteRows = false;
+            this.DgvPrestamos.AllowUserToOrderColumns = true;
             this.DgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvPrestamos.Location = new System.Drawing.Point(65, 373);
             this.DgvPrestamos.Name = "DgvPrestamos";

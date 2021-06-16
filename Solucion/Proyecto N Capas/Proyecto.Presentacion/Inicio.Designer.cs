@@ -34,6 +34,7 @@ namespace Proyecto.Presentacion
             this.MatenimientosMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.matenimientoLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -48,13 +49,12 @@ namespace Proyecto.Presentacion
             this.TxtBuscarProfesor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnDevoluciones = new System.Windows.Forms.Button();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnPrestamo = new System.Windows.Forms.Button();
             this.DgvPrestamos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnDevoluciones = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,7 +73,7 @@ namespace Proyecto.Presentacion
             this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1352, 30);
+            this.menuStrip.Size = new System.Drawing.Size(1352, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -98,6 +98,12 @@ namespace Proyecto.Presentacion
             this.matenimientoLibrosToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
             this.matenimientoLibrosToolStripMenuItem.Text = "&Libros";
             this.matenimientoLibrosToolStripMenuItem.Click += new System.EventHandler(this.matenimientoLibrosToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // statusStrip
             // 
@@ -139,6 +145,9 @@ namespace Proyecto.Presentacion
             // 
             // DgvLibros
             // 
+            this.DgvLibros.AllowUserToAddRows = false;
+            this.DgvLibros.AllowUserToDeleteRows = false;
+            this.DgvLibros.AllowUserToOrderColumns = true;
             this.DgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLibros.Location = new System.Drawing.Point(12, 74);
             this.DgvLibros.Name = "DgvLibros";
@@ -180,9 +189,13 @@ namespace Proyecto.Presentacion
             // 
             // DgvProfesores
             // 
+            this.DgvProfesores.AllowUserToAddRows = false;
+            this.DgvProfesores.AllowUserToDeleteRows = false;
+            this.DgvProfesores.AllowUserToOrderColumns = true;
             this.DgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProfesores.Location = new System.Drawing.Point(25, 75);
             this.DgvProfesores.Name = "DgvProfesores";
+            this.DgvProfesores.ReadOnly = true;
             this.DgvProfesores.RowHeadersWidth = 51;
             this.DgvProfesores.RowTemplate.Height = 24;
             this.DgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -229,6 +242,16 @@ namespace Proyecto.Presentacion
             this.panel3.Size = new System.Drawing.Size(1352, 310);
             this.panel3.TabIndex = 6;
             // 
+            // BtnDevoluciones
+            // 
+            this.BtnDevoluciones.Location = new System.Drawing.Point(983, 221);
+            this.BtnDevoluciones.Name = "BtnDevoluciones";
+            this.BtnDevoluciones.Size = new System.Drawing.Size(357, 63);
+            this.BtnDevoluciones.TabIndex = 7;
+            this.BtnDevoluciones.Text = "Devoluciones";
+            this.BtnDevoluciones.UseVisualStyleBackColor = true;
+            this.BtnDevoluciones.Click += new System.EventHandler(this.BtnDevoluciones_Click);
+            // 
             // dateTimePicker
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(983, 89);
@@ -257,9 +280,13 @@ namespace Proyecto.Presentacion
             // 
             // DgvPrestamos
             // 
+            this.DgvPrestamos.AllowUserToAddRows = false;
+            this.DgvPrestamos.AllowUserToDeleteRows = false;
+            this.DgvPrestamos.AllowUserToOrderColumns = true;
             this.DgvPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvPrestamos.Location = new System.Drawing.Point(15, 59);
             this.DgvPrestamos.Name = "DgvPrestamos";
+            this.DgvPrestamos.ReadOnly = true;
             this.DgvPrestamos.RowHeadersWidth = 51;
             this.DgvPrestamos.RowTemplate.Height = 24;
             this.DgvPrestamos.Size = new System.Drawing.Size(944, 248);
@@ -273,22 +300,6 @@ namespace Proyecto.Presentacion
             this.label3.Size = new System.Drawing.Size(203, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Prestamos activos del profesor";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // BtnDevoluciones
-            // 
-            this.BtnDevoluciones.Location = new System.Drawing.Point(983, 221);
-            this.BtnDevoluciones.Name = "BtnDevoluciones";
-            this.BtnDevoluciones.Size = new System.Drawing.Size(357, 63);
-            this.BtnDevoluciones.TabIndex = 7;
-            this.BtnDevoluciones.Text = "Devoluciones";
-            this.BtnDevoluciones.UseVisualStyleBackColor = true;
-            this.BtnDevoluciones.Click += new System.EventHandler(this.BtnDevoluciones_Click);
             // 
             // Inicio
             // 
