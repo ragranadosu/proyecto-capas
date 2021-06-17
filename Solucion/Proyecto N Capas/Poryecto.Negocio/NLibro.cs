@@ -17,6 +17,13 @@ namespace Proyecto.Negocio
             return Libros.Listar();
         }
 
+        public static DataTable ListarActivo()
+        {
+            DLibro Libros = new DLibro();
+
+            return Libros.ListarActivos();
+        }
+
         public static DataTable Buscar(string Valor)
         {
             DLibro Libros = new DLibro();

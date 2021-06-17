@@ -94,8 +94,18 @@ GO
 
 CREATE PROC libro_listar
 AS
-	SELECT idlibro as IdLibro, titulo as Titulo, prestado as Prestado ,num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
+	SELECT idlibro as IdLibro,codigo as Codigo ,titulo as Titulo, prestado as Prestado ,num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion, activo as Activo
 	FROM libro
+	ORDER BY idlibro ASC
+GO
+
+-- Listar Activos
+
+CREATE PROC libro_listarActivos
+AS
+	SELECT idlibro as IdLibro,codigo as Codigo ,titulo as Titulo, prestado as Prestado ,num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion, activo as Activo
+	FROM libro
+	WHERE activo=1
 	ORDER BY idlibro ASC
 GO
 
@@ -104,15 +114,27 @@ GO
 CREATE PROC libro_buscar
 @valor varchar(30)
 AS
-	SELECT idlibro as IdLibro, titulo as Titulo, prestado as Prestado, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion
+	SELECT idlibro as IdLibro, codigo as Codigo, titulo as Titulo, prestado as Prestado, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion, activo as Activo
 	FROM libro
 	WHERE titulo like '%' + @valor + '%' or descripcion like '%' + @valor + '%'
+	ORDER BY titulo ASC
+GO
+
+--Buscar por codigo
+
+CREATE PROC libro_buscar
+@valor varchar(30)
+AS
+	SELECT idlibro as IdLibro, codigo as Codigo, titulo as Titulo, prestado as Prestado, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion, activo as Activo
+	FROM libro
+	WHERE codigo=@valor
 	ORDER BY titulo ASC
 GO
 
 -- Insertar
 
 CREATE PROC libro_insertar
+@codigo VARCHAR(20),
 @titulo VARCHAR(50),
 @num_ejemplares INTEGER,
 @isbn VARCHAR(50),
@@ -125,18 +147,20 @@ CREATE PROC libro_insertar
 @materia VARCHAR(50),
 @num_paginas INTEGER,
 @ubicacion VARCHAR(50),
-@descripcion VARCHAR(255)
+@descripcion VARCHAR(255),
+@activo BIT
 AS
-	INSERT INTO libro (titulo ,num_ejemplares, isbn,autor, editorial, anio_edicion, num_edicion, 
-						pais, idioma, materia, num_paginas, ubicacion, descripcion)
-		values (@titulo, @num_ejemplares, @isbn, @autor, @editorial, @anio_edicion, @num_edicion,
-				@pais, @idioma, @materia, @num_paginas, @ubicacion, @descripcion);
+	INSERT INTO libro (codigo, titulo ,num_ejemplares, isbn,autor, editorial, anio_edicion, num_edicion, 
+						pais, idioma, materia, num_paginas, ubicacion, descripcion, activo)
+		values (@codigo, @titulo, @num_ejemplares, @isbn, @autor, @editorial, @anio_edicion, @num_edicion,
+				@pais, @idioma, @materia, @num_paginas, @ubicacion, @descripcion, @activo);
 GO
 
 -- Actualizar
 
 CREATE PROC libro_actualizar
 @idlibro INTEGER,
+@codigo VARCHAR(20),
 @titulo VARCHAR(50),
 @prestado bit,
 @num_ejemplares INTEGER,
@@ -150,11 +174,12 @@ CREATE PROC libro_actualizar
 @materia VARCHAR(50),
 @num_paginas INTEGER,
 @ubicacion VARCHAR(50),
-@descripcion VARCHAR(255)
+@descripcion VARCHAR(255),
+@activo BIT
 AS
-	UPDATE libro SET titulo=@titulo, prestado=@prestado,num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
+	UPDATE libro SET codigo=@codigo, titulo=@titulo, prestado=@prestado,num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
 					anio_edicion=@anio_edicion, num_edicion=@num_edicion, pais=@pais, idioma=@idioma, materia=@materia,
-					num_paginas=@num_paginas, ubicacion=@ubicacion, descripcion=@descripcion
+					num_paginas=@num_paginas, ubicacion=@ubicacion, descripcion=@descripcion, activo=@activo
 	WHERE idlibro=@idlibro
 GO
 

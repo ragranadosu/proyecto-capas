@@ -65,7 +65,7 @@ namespace Proyecto.Presentacion
         {
             try
             {
-                DgvLibros.DataSource = NLibro.Listar();
+                DgvLibros.DataSource = NLibro.ListarActivo();
             }
             catch (Exception ex)
             {

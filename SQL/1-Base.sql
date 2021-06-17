@@ -15,6 +15,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE libro (
 	idlibro INTEGER IDENTITY PRIMARY KEY,
+	codigo VARCHAR(20),
 	titulo VARCHAR(150),
 	prestado BIT DEFAULT 0,
 	num_ejemplares INTEGER,
@@ -28,7 +29,9 @@ CREATE TABLE libro (
 	materia VARCHAR(50),
 	num_paginas INTEGER,
 	ubicacion VARCHAR(10),
-	descripcion VARCHAR(255)
+	descripcion VARCHAR(255),
+	activo BIT,
+
 )
 
 CREATE TABLE prestamo (
