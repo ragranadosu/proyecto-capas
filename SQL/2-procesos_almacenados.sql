@@ -161,11 +161,12 @@ GO
 
 -- Actualizar
 
+DROP PROC libro_actualizar
+
 CREATE PROC libro_actualizar
 @idlibro INTEGER,
 @codigo VARCHAR(20),
 @titulo VARCHAR(50),
-@prestado bit,
 @num_ejemplares INTEGER,
 @isbn VARCHAR(50),
 @autor VARCHAR (255),
@@ -180,7 +181,7 @@ CREATE PROC libro_actualizar
 @descripcion VARCHAR(255),
 @activo BIT
 AS
-	UPDATE libro SET codigo=@codigo, titulo=@titulo, prestado=@prestado,num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
+	UPDATE libro SET codigo=@codigo, titulo=@titulo,num_ejemplares=@num_ejemplares, isbn=@isbn, autor=@autor, editorial=@editorial,
 					anio_edicion=@anio_edicion, num_edicion=@num_edicion, pais=@pais, idioma=@idioma, materia=@materia,
 					num_paginas=@num_paginas, ubicacion=@ubicacion, descripcion=@descripcion, activo=@activo
 	WHERE idlibro=@idlibro

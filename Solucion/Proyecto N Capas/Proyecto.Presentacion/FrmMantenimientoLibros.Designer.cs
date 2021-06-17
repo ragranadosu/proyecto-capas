@@ -36,24 +36,10 @@ namespace Proyecto.Presentacion
             this.DgvLibros = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPageMantenimiento = new System.Windows.Forms.TabPage();
-            this.TxtTitulo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtNumEjemplares = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtIsbn = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtAutor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtEditorial = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtCodigo = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.TxtId = new System.Windows.Forms.TextBox();
-            this.BtnInsertar = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.TxtAnioEdicion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.CboxActivo = new System.Windows.Forms.ComboBox();
+            this.LblActivo = new System.Windows.Forms.Label();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.TxtUbicacion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.TxtNumPaginas = new System.Windows.Forms.TextBox();
@@ -66,8 +52,24 @@ namespace Proyecto.Presentacion
             this.label9 = new System.Windows.Forms.Label();
             this.TxtNumEdicion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.TxtAnioEdicion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnInsertar = new System.Windows.Forms.Button();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TxtEditorial = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtAutor = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtIsbn = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtNumEjemplares = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtTitulo = new System.Windows.Forms.TextBox();
             this.TabGeneral.SuspendLayout();
             this.tabPageListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).BeginInit();
@@ -127,8 +129,10 @@ namespace Proyecto.Presentacion
             this.DgvLibros.ReadOnly = true;
             this.DgvLibros.RowHeadersWidth = 51;
             this.DgvLibros.RowTemplate.Height = 24;
+            this.DgvLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLibros.Size = new System.Drawing.Size(805, 367);
             this.DgvLibros.TabIndex = 0;
+            this.DgvLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLibros_CellDoubleClick);
             // 
             // Seleccionar
             // 
@@ -140,6 +144,8 @@ namespace Proyecto.Presentacion
             // 
             // tabPageMantenimiento
             // 
+            this.tabPageMantenimiento.Controls.Add(this.CboxActivo);
+            this.tabPageMantenimiento.Controls.Add(this.LblActivo);
             this.tabPageMantenimiento.Controls.Add(this.TxtDescripcion);
             this.tabPageMantenimiento.Controls.Add(this.label14);
             this.tabPageMantenimiento.Controls.Add(this.TxtUbicacion);
@@ -180,152 +186,41 @@ namespace Proyecto.Presentacion
             this.tabPageMantenimiento.Text = "Matenimiento";
             this.tabPageMantenimiento.UseVisualStyleBackColor = true;
             // 
-            // TxtTitulo
+            // CboxActivo
             // 
-            this.TxtTitulo.Location = new System.Drawing.Point(17, 129);
-            this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.Size = new System.Drawing.Size(162, 22);
-            this.TxtTitulo.TabIndex = 0;
+            this.CboxActivo.FormattingEnabled = true;
+            this.CboxActivo.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.CboxActivo.Location = new System.Drawing.Point(288, 22);
+            this.CboxActivo.Name = "CboxActivo";
+            this.CboxActivo.Size = new System.Drawing.Size(159, 24);
+            this.CboxActivo.TabIndex = 53;
             // 
-            // label1
+            // LblActivo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Titulo";
+            this.LblActivo.AutoSize = true;
+            this.LblActivo.Location = new System.Drawing.Point(288, 4);
+            this.LblActivo.Name = "LblActivo";
+            this.LblActivo.Size = new System.Drawing.Size(46, 17);
+            this.LblActivo.TabIndex = 52;
+            this.LblActivo.Text = "Activo";
             // 
-            // TxtNumEjemplares
+            // TxtDescripcion
             // 
-            this.TxtNumEjemplares.Location = new System.Drawing.Point(17, 190);
-            this.TxtNumEjemplares.Name = "TxtNumEjemplares";
-            this.TxtNumEjemplares.Size = new System.Drawing.Size(162, 22);
-            this.TxtNumEjemplares.TabIndex = 5;
+            this.TxtDescripcion.Location = new System.Drawing.Point(288, 463);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(162, 22);
+            this.TxtDescripcion.TabIndex = 51;
             // 
-            // label3
+            // label14
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Numero Ejemplares";
-            // 
-            // TxtIsbn
-            // 
-            this.TxtIsbn.Location = new System.Drawing.Point(17, 257);
-            this.TxtIsbn.Name = "TxtIsbn";
-            this.TxtIsbn.Size = new System.Drawing.Size(162, 22);
-            this.TxtIsbn.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 237);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "ISBN";
-            // 
-            // TxtAutor
-            // 
-            this.TxtAutor.Location = new System.Drawing.Point(17, 326);
-            this.TxtAutor.Name = "TxtAutor";
-            this.TxtAutor.Size = new System.Drawing.Size(162, 22);
-            this.TxtAutor.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 306);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Autor";
-            // 
-            // TxtEditorial
-            // 
-            this.TxtEditorial.Location = new System.Drawing.Point(17, 398);
-            this.TxtEditorial.Name = "TxtEditorial";
-            this.TxtEditorial.Size = new System.Drawing.Size(162, 22);
-            this.TxtEditorial.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 378);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Editorial";
-            // 
-            // TxtCodigo
-            // 
-            this.TxtCodigo.Location = new System.Drawing.Point(17, 69);
-            this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(162, 22);
-            this.TxtCodigo.TabIndex = 31;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 49);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 17);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "Codigo";
-            // 
-            // TxtId
-            // 
-            this.TxtId.Location = new System.Drawing.Point(17, 15);
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(162, 22);
-            this.TxtId.TabIndex = 32;
-            // 
-            // BtnInsertar
-            // 
-            this.BtnInsertar.Location = new System.Drawing.Point(561, 68);
-            this.BtnInsertar.Name = "BtnInsertar";
-            this.BtnInsertar.Size = new System.Drawing.Size(162, 23);
-            this.BtnInsertar.TabIndex = 33;
-            this.BtnInsertar.Text = "Insertar";
-            this.BtnInsertar.UseVisualStyleBackColor = true;
-            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
-            // 
-            // BtnCancelar
-            // 
-            this.BtnCancelar.Location = new System.Drawing.Point(561, 128);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(162, 23);
-            this.BtnCancelar.TabIndex = 34;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.Location = new System.Drawing.Point(561, 194);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(162, 23);
-            this.BtnActualizar.TabIndex = 35;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // TxtAnioEdicion
-            // 
-            this.TxtAnioEdicion.Location = new System.Drawing.Point(20, 463);
-            this.TxtAnioEdicion.Name = "TxtAnioEdicion";
-            this.TxtAnioEdicion.Size = new System.Drawing.Size(162, 22);
-            this.TxtAnioEdicion.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 443);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 17);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Año de Edicion";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(288, 443);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 17);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "Descripcion";
             // 
             // TxtUbicacion
             // 
@@ -423,21 +318,154 @@ namespace Proyecto.Presentacion
             this.label8.TabIndex = 38;
             this.label8.Text = "Numero de edicion";
             // 
-            // TxtDescripcion
+            // TxtAnioEdicion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(288, 463);
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(162, 22);
-            this.TxtDescripcion.TabIndex = 51;
+            this.TxtAnioEdicion.Location = new System.Drawing.Point(20, 463);
+            this.TxtAnioEdicion.Name = "TxtAnioEdicion";
+            this.TxtAnioEdicion.Size = new System.Drawing.Size(162, 22);
+            this.TxtAnioEdicion.TabIndex = 37;
             // 
-            // label14
+            // label7
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(288, 443);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 17);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "Descripcion";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 443);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 17);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Año de Edicion";
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.Location = new System.Drawing.Point(561, 69);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(162, 23);
+            this.BtnActualizar.TabIndex = 35;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Location = new System.Drawing.Point(561, 128);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(162, 23);
+            this.BtnCancelar.TabIndex = 34;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
+            // BtnInsertar
+            // 
+            this.BtnInsertar.Location = new System.Drawing.Point(561, 68);
+            this.BtnInsertar.Name = "BtnInsertar";
+            this.BtnInsertar.Size = new System.Drawing.Size(162, 23);
+            this.BtnInsertar.TabIndex = 33;
+            this.BtnInsertar.Text = "Insertar";
+            this.BtnInsertar.UseVisualStyleBackColor = true;
+            this.BtnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
+            // 
+            // TxtId
+            // 
+            this.TxtId.Location = new System.Drawing.Point(17, 15);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(162, 22);
+            this.TxtId.TabIndex = 32;
+            // 
+            // TxtCodigo
+            // 
+            this.TxtCodigo.Location = new System.Drawing.Point(17, 69);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.Size = new System.Drawing.Size(162, 22);
+            this.TxtCodigo.TabIndex = 31;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(17, 49);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 17);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Codigo";
+            // 
+            // TxtEditorial
+            // 
+            this.TxtEditorial.Location = new System.Drawing.Point(17, 398);
+            this.TxtEditorial.Name = "TxtEditorial";
+            this.TxtEditorial.Size = new System.Drawing.Size(162, 22);
+            this.TxtEditorial.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 378);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Editorial";
+            // 
+            // TxtAutor
+            // 
+            this.TxtAutor.Location = new System.Drawing.Point(17, 326);
+            this.TxtAutor.Name = "TxtAutor";
+            this.TxtAutor.Size = new System.Drawing.Size(162, 22);
+            this.TxtAutor.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 306);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Autor";
+            // 
+            // TxtIsbn
+            // 
+            this.TxtIsbn.Location = new System.Drawing.Point(17, 257);
+            this.TxtIsbn.Name = "TxtIsbn";
+            this.TxtIsbn.Size = new System.Drawing.Size(162, 22);
+            this.TxtIsbn.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "ISBN";
+            // 
+            // TxtNumEjemplares
+            // 
+            this.TxtNumEjemplares.Location = new System.Drawing.Point(17, 190);
+            this.TxtNumEjemplares.Name = "TxtNumEjemplares";
+            this.TxtNumEjemplares.Size = new System.Drawing.Size(162, 22);
+            this.TxtNumEjemplares.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Numero Ejemplares";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Titulo";
+            // 
+            // TxtTitulo
+            // 
+            this.TxtTitulo.Location = new System.Drawing.Point(17, 129);
+            this.TxtTitulo.Name = "TxtTitulo";
+            this.TxtTitulo.Size = new System.Drawing.Size(162, 22);
+            this.TxtTitulo.TabIndex = 0;
             // 
             // FrmMantenimientoLibros
             // 
@@ -499,5 +527,7 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtAnioEdicion;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LblActivo;
+        private System.Windows.Forms.ComboBox CboxActivo;
     }
 }
