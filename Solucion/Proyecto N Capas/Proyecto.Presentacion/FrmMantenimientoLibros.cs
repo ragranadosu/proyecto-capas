@@ -33,6 +33,7 @@ namespace Proyecto.Presentacion
         private void Formato()
         {
             DgvLibros.Columns[0].Visible = false;
+            TxtId.Visible = false;
         }
 
         private void FrmMantenimientoLibros_Load(object sender, EventArgs e)
@@ -46,6 +47,37 @@ namespace Proyecto.Presentacion
             try
             {
                 DgvLibros.DataSource = NLibro.Buscar(TxtBuscar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void BtnInsertar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NLibro.Insertar(
+                    TxtCodigo.Text.Trim(),
+                    TxtTitulo.Text.Trim(),
+                    false,
+                    Convert.ToInt32(TxtNumEjemplares.Text),
+                    TxtIsbn.Text.Trim(),
+                    TxtAutor.Text.Trim(),
+                    TxtEditorial.Text.Trim(),
+                    TxtAnioEdicion.Text.Trim(),
+                    Convert.ToInt32(TxtNumEdicion.Text),
+                    TxtPais.Text.Trim(),
+                    TxtIdioma.Text.Trim(),
+                    TxtMateria.Text.Trim(),
+                    Convert.ToInt32(TxtNumPaginas.Text),
+                    TxtUbicacion.Text.Trim(),
+                    TxtDescripcion.Text.Trim(),
+                    true
+                    );
+
+                this.Close();
             }
             catch (Exception ex)
             {

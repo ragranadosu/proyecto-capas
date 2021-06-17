@@ -4,6 +4,8 @@ use proyecto;
 
 -- Listar
 
+SELECT * FROM libro;
+
 CREATE PROC usuario_listar
 AS
 	SELECT idusuario as IdUsuario, nombre as Nombre, apellido as Apellido, email as Email, contrasena as Contrasena, rol as Rol
@@ -135,6 +137,7 @@ GO
 
 CREATE PROC libro_insertar
 @codigo VARCHAR(20),
+@prestado BIT,
 @titulo VARCHAR(50),
 @num_ejemplares INTEGER,
 @isbn VARCHAR(50),

@@ -10,6 +10,8 @@ namespace Proyecto.Entidades
     {
         public int IdLibro { get; set; }
 
+        public string Codigo { get; set; }
+
         public string Titulo { get; set; }
 
         public bool Prestado { get; set; }
@@ -32,10 +34,12 @@ namespace Proyecto.Entidades
 
         public string Materia { get; set; }
 
-        public string NumPaginas { get; set; }
+        public int NumPaginas { get; set; }
 
         public string Ubicacion { get; set; }
 
         public string Descripcion { get; set; }
+
+        public bool Activo { get; set; }
     }
 }
