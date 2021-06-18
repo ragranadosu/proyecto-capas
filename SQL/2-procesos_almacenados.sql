@@ -124,7 +124,7 @@ GO
 
 --Buscar por codigo
 
-CREATE PROC libro_buscar
+CREATE PROC libro_buscarCodigo
 @valor varchar(30)
 AS
 	SELECT idlibro as IdLibro, codigo as Codigo, titulo as Titulo, prestado as Prestado, num_ejemplares as NumEjemplares, isbn as Isbn, autor as Autor, editorial as Editorial, anio_edicion as AnioEdicion, num_edicion as NumEdicion, pais as Pais, idioma as Idioma, materia as Materia, num_paginas as NumPaginas, ubicacion as Ubicacion, descripcion as Descripcion, activo as Activo

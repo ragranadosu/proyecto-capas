@@ -32,6 +32,13 @@ namespace Proyecto.Negocio
             return Libros.Buscar(Valor);
         }
 
+        public static DataTable BuscarCodigo(string Valor)
+        {
+            DLibro Libros = new DLibro();
+
+            return Libros.BuscarCodigo(Valor);
+        }
+
         public static string Insertar(string Codigo, string Titulo, bool Prestado, int NumEjemplares, string Isbn, string Autor, string Editorial, string AnioEdicion, int NumEdicion, string Pais, string Idioma, string Materia, int NumPaginas, string Ubicacion, string Descripcion, bool Activo)
         {
             DLibro Datos = new DLibro();

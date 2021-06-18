@@ -37,6 +37,7 @@ namespace Proyecto.Presentacion
             BtnActualizar.Visible = false;
             CboxActivo.Visible = false;
             LblActivo.Visible = false;
+            CboxCriterio.SelectedItem = "Titulo";
         }
 
         private void Limpiar()
@@ -71,7 +72,14 @@ namespace Proyecto.Presentacion
         {
             try
             {
-                DgvLibros.DataSource = NLibro.Buscar(TxtBuscar.Text);
+                if (Convert.ToString(CboxCriterio.SelectedItem).Equals("Titulo"))
+                {
+                    DgvLibros.DataSource = NLibro.Buscar(TxtBuscar.Text);
+                }else if (Convert.ToString(CboxCriterio.SelectedItem).Equals("Codigo"))
+                {
+                    DgvLibros.DataSource = NLibro.BuscarCodigo(TxtBuscar.Text);
+                }
+                
             }
             catch (Exception ex)
             {

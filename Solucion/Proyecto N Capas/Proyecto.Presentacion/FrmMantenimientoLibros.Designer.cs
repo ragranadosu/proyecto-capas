@@ -70,6 +70,7 @@ namespace Proyecto.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtTitulo = new System.Windows.Forms.TextBox();
+            this.CboxCriterio = new System.Windows.Forms.ComboBox();
             this.TabGeneral.SuspendLayout();
             this.tabPageListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLibros)).BeginInit();
@@ -88,6 +89,7 @@ namespace Proyecto.Presentacion
             // 
             // tabPageListado
             // 
+            this.tabPageListado.Controls.Add(this.CboxCriterio);
             this.tabPageListado.Controls.Add(this.TxtBuscar);
             this.tabPageListado.Controls.Add(this.BtnBuscar);
             this.tabPageListado.Controls.Add(this.DgvLibros);
@@ -108,7 +110,7 @@ namespace Proyecto.Presentacion
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(507, 31);
+            this.BtnBuscar.Location = new System.Drawing.Point(674, 30);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(137, 23);
             this.BtnBuscar.TabIndex = 1;
@@ -467,6 +469,17 @@ namespace Proyecto.Presentacion
             this.TxtTitulo.Size = new System.Drawing.Size(162, 22);
             this.TxtTitulo.TabIndex = 0;
             // 
+            // CboxCriterio
+            // 
+            this.CboxCriterio.FormattingEnabled = true;
+            this.CboxCriterio.Items.AddRange(new object[] {
+            "Titulo",
+            "Codigo"});
+            this.CboxCriterio.Location = new System.Drawing.Point(481, 30);
+            this.CboxCriterio.Name = "CboxCriterio";
+            this.CboxCriterio.Size = new System.Drawing.Size(157, 24);
+            this.CboxCriterio.TabIndex = 3;
+            // 
             // FrmMantenimientoLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -529,5 +542,6 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LblActivo;
         private System.Windows.Forms.ComboBox CboxActivo;
+        private System.Windows.Forms.ComboBox CboxCriterio;
     }
 }
