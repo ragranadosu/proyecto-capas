@@ -55,6 +55,8 @@ namespace Proyecto.Presentacion
             this.BtnPrestamo = new System.Windows.Forms.Button();
             this.DgvPrestamos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,7 +75,7 @@ namespace Proyecto.Presentacion
             this.reportesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1352, 28);
+            this.menuStrip.Size = new System.Drawing.Size(1352, 30);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -101,8 +103,11 @@ namespace Proyecto.Presentacion
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.librosToolStripMenuItem,
+            this.prestamosToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // statusStrip
@@ -301,6 +306,20 @@ namespace Proyecto.Presentacion
             this.label3.TabIndex = 4;
             this.label3.Text = "Prestamos activos del profesor";
             // 
+            // librosToolStripMenuItem
+            // 
+            this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
+            this.librosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.librosToolStripMenuItem.Text = "Libros";
+            this.librosToolStripMenuItem.Click += new System.EventHandler(this.librosToolStripMenuItem_Click);
+            // 
+            // prestamosToolStripMenuItem
+            // 
+            this.prestamosToolStripMenuItem.Name = "prestamosToolStripMenuItem";
+            this.prestamosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prestamosToolStripMenuItem.Text = "Prestamos";
+            this.prestamosToolStripMenuItem.Click += new System.EventHandler(this.prestamosToolStripMenuItem_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -363,6 +382,8 @@ namespace Proyecto.Presentacion
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.Button BtnDevoluciones;
+        private System.Windows.Forms.ToolStripMenuItem librosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prestamosToolStripMenuItem;
     }
 }
 

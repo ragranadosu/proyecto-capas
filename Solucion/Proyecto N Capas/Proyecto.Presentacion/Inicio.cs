@@ -185,5 +185,17 @@ namespace Proyecto.Presentacion
             this.ListarLibros();
             this.ListarPrestamos();
         }
+
+        private void librosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteLibros frmReporteLibros = new FrmReporteLibros();
+            frmReporteLibros.Show();
+        }
+
+        private void prestamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReportePrestamos frmReportePrestamos = new FrmReportePrestamos();
+            frmReportePrestamos.Show();
+        }
     }
 }
