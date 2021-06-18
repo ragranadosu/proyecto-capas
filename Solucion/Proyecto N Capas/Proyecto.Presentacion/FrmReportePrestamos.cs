@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,30 @@ namespace Proyecto.Presentacion
 {
     public partial class FrmReportePrestamos : Form
     {
+        private int total = 0;
         public FrmReportePrestamos()
         {
             InitializeComponent();
+        }
+
+        private void Listar()
+        {
+            try
+            {
+                DgvPrestamos.DataSource = NPrestamo.Listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void FrmReportePrestamos_Load(object sender, EventArgs e)
+        {
+            this.Listar();
+            this.total = DgvPrestamos.Rows.Count;
+            LblTotal.Text = "Total: " + Convert.ToString(this.total);
+
         }
     }
 }
