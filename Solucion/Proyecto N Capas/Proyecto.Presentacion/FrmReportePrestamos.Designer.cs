@@ -54,9 +54,9 @@ namespace Proyecto.Presentacion
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 17);
+            this.label1.Size = new System.Drawing.Size(197, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Reporte de prestamos";
+            this.label1.Text = "Reporte de prestamos activos";
             // 
             // LblTotal
             // 
