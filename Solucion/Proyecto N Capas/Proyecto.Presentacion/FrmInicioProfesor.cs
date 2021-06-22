@@ -18,6 +18,12 @@ namespace Proyecto.Presentacion
             InitializeComponent();
         }
 
+        private void formato()
+        {
+            DgvListado.Columns[0].HeaderText = "Id del libro";
+            DgvListado.Columns[4].HeaderText = "Numero ejemplares";
+        }
+
         private void Listar()
         {
             try
@@ -37,6 +43,7 @@ namespace Proyecto.Presentacion
         private void FrmInicioProfesor_Load(object sender, EventArgs e)
         {
             this.Listar();
+            this.formato();
         }
     }
 }
