@@ -10,3 +10,9 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Soluc
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.dll
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.pdb
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.csprojAssemblyReference.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\bin\Debug\Proyecto.Entidades.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\bin\Debug\Proyecto.Entidades.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.csprojAssemblyReference.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Entidades\obj\Debug\Proyecto.Entidades.pdb

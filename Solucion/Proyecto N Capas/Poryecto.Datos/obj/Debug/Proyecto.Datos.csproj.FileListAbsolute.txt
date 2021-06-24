@@ -16,3 +16,12 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Soluc
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.csproj.CopyComplete
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.dll
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\bin\Debug\Proyecto.Datos.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\bin\Debug\Proyecto.Datos.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\bin\Debug\Proyecto.Entidades.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\bin\Debug\Proyecto.Entidades.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.csprojAssemblyReference.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.csproj.CoreCompileInputs.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.csproj.CopyComplete
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Poryecto.Datos\obj\Debug\Proyecto.Datos.pdb

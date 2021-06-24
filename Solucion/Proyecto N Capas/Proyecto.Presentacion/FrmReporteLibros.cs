@@ -19,6 +19,13 @@ namespace Proyecto.Presentacion
             InitializeComponent();
         }
 
+        private void Formato()
+        {
+            DgvLibros.Columns[0].HeaderText = "Id del libro";
+            DgvLibros.Columns[5].HeaderText = "ISBN";
+            DgvLibros.Columns[8].HeaderText = "Año Edición";
+
+        }
         private void Listar()
         {
             try
@@ -33,7 +40,9 @@ namespace Proyecto.Presentacion
 
         private void FrmReporteLibros_Load(object sender, EventArgs e)
         {
+        
             this.Listar();
+            this.Formato();
             total = DgvLibros.Rows.Count;
             LblTotal.Text = "Total: " + Convert.ToString(total);
         }

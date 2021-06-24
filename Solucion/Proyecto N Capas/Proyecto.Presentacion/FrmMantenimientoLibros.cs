@@ -17,7 +17,7 @@ namespace Proyecto.Presentacion
         {
             InitializeComponent();
         }
-
+     
         private void ListarLibros()
         {
             try
@@ -32,12 +32,17 @@ namespace Proyecto.Presentacion
 
         private void Formato()
         {
+            DgvLibros.Columns[1].HeaderText = "Id del libro";
+            DgvLibros.Columns[6].HeaderText = "ISBN";
+            DgvLibros.Columns[9].HeaderText = "Año Edición";
+
             DgvLibros.Columns[0].Visible = false;
             TxtId.Visible = false;
             BtnActualizar.Visible = false;
             CboxActivo.Visible = false;
             LblActivo.Visible = false;
             CboxCriterio.SelectedItem = "Titulo";
+       
         }
 
         private void Limpiar()
@@ -64,8 +69,11 @@ namespace Proyecto.Presentacion
 
         private void FrmMantenimientoLibros_Load(object sender, EventArgs e)
         {
-            this.Formato();
+          
+       
             this.ListarLibros();
+            this.Formato();
+            
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -168,7 +176,7 @@ namespace Proyecto.Presentacion
             CboxActivo.Visible = true;
             LblActivo.Visible = true;
 
-            TxtId.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["IdLibro"].Value);
+            TxtId.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Id de Libro"].Value);
             TxtCodigo.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Codigo"].Value);
             TxtTitulo.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Titulo"].Value);
             TxtNumEjemplares.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["NumEjemplares"].Value);

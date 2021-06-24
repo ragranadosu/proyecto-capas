@@ -22,6 +22,8 @@ namespace Proyecto.Presentacion
         {
             DgvListado.Columns[0].HeaderText = "Id del libro";
             DgvListado.Columns[4].HeaderText = "Numero ejemplares";
+            DgvListado.Columns[5].HeaderText = "Acrónimo ISBN";
+            DgvListado.Columns[8].HeaderText = "Año Edición";
         }
 
         private void Listar()

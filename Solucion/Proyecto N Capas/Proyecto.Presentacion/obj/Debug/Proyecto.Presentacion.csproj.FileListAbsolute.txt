@@ -34,3 +34,26 @@ C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Soluc
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmMantenimientoLibros.resources
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmReporteLibros.resources
 C:\Users\rau3\OneDrive\Documentos\UCA\Ciclo 01-2021\N-Capas\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmReportePrestamos.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Presentacion.exe.config
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Presentacion.exe
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Presentacion.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Entidades.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Negocio.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Datos.dll
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Entidades.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Negocio.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\bin\Debug\Proyecto.Datos.pdb
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csprojAssemblyReference.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmDevoluciones.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmInicioProfesor.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmMantenimientoLibros.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmReporteLibros.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.FrmReportePrestamos.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.Inicio.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.Login.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.Properties.Resources.resources
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.GenerateResource.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.csproj.CopyComplete
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.exe
+C:\Users\MOPT\Desktop\proyecto-capas\Solucion\Proyecto N Capas\Proyecto.Presentacion\obj\Debug\Proyecto.Presentacion.pdb

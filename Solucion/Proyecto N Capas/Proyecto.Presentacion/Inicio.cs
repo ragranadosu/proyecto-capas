@@ -22,7 +22,13 @@ namespace Proyecto.Presentacion
         {
             InitializeComponent();
         }
+        private void Formato()
+        {
+            DgvLibros.Columns[0].HeaderText = "Id del libro";
+            DgvLibros.Columns[5].HeaderText = "ISBN";
+            DgvLibros.Columns[8].HeaderText = "Año Edición";
 
+        }
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -118,6 +124,7 @@ namespace Proyecto.Presentacion
             this.ListarLibros();
             this.ListarProfesores();
             this.ListarPrestamos();
+            this.Formato();
         }
 
         private void matenimientoLibrosToolStripMenuItem_Click(object sender, EventArgs e)
