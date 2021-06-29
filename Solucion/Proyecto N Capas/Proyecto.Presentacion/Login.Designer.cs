@@ -75,6 +75,7 @@ namespace Proyecto.Presentacion
             // 
             this.TxtContrasena.Location = new System.Drawing.Point(320, 232);
             this.TxtContrasena.Name = "TxtContrasena";
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.Size = new System.Drawing.Size(184, 22);
             this.TxtContrasena.TabIndex = 4;
             // 

@@ -176,7 +176,7 @@ namespace Proyecto.Presentacion
             CboxActivo.Visible = true;
             LblActivo.Visible = true;
 
-            TxtId.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Id de Libro"].Value);
+            TxtId.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["IdLibro"].Value);
             TxtCodigo.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Codigo"].Value);
             TxtTitulo.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["Titulo"].Value);
             TxtNumEjemplares.Text = Convert.ToString(DgvLibros.CurrentRow.Cells["NumEjemplares"].Value);

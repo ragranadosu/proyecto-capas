@@ -19,9 +19,9 @@ namespace Poryecto.Datos
         private Conexion()
         {
             this.Base = "proyecto";
-            this.Servidor = "MOPT-PC";
-            this.Usuario = "root";
-            this.Clave = " ";
+            this.Servidor = "DESKTOP-I9I44NU\\SQLEXPRESS";
+            this.Usuario = "sa";
+            this.Clave = "trollface12";
             this.Seguridad = true; //Seguridad windows
         }
 
